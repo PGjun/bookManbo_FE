@@ -1,29 +1,22 @@
-import styled from "styled-components";
-import tw from "twin.macro";
-
-import logo from "./logo.svg";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
+import Layout from "./layout/Layout";
+import Main from "./page/Main/Main";
 function App() {
-  const Test = styled.main.attrs({
-    className: "my-20 p-4 w-96 border bg-blue-500",
-  })`
-    & {
-      .test {
-        ${tw`bg-pink-500`}
-      }
-      span {
-        ${tw`bg-white`}
-      }
-    }
-  `;
   return (
-    <div className="">
-      <Test>
-        <div></div>
-      </Test>
-      <Routes></Routes>
-    </div>
+    <>
+      <Routes>
+        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route exact path="/" element={<Layout />}>
+          <Route index element={<Main title="메인메뉴" />} />
+          {/* /parant/child형태로 들어감 */}
+          {/* <Route path="parant/*" element={<Parant title="부모 메뉴" />}>
+            <Route path="child" element={<Child title="자식 메뉴" />} />
+          </Route> */}
+        </Route>
+      </Routes>
+    </>
   );
 }
 

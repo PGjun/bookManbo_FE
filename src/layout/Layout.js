@@ -7,11 +7,11 @@ import Footer from "./Footer/Footer";
 const Layout = (props) => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <main>
         <Outlet />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

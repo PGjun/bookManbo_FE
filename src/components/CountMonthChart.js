@@ -55,6 +55,10 @@ const option = {
   },
 };
 
+const Container = styled.div`
+  width: 10rem;
+`;
+
 const CountMonthChart = () => {
   return (
     <Container>
@@ -64,7 +68,3 @@ const CountMonthChart = () => {
 };
 
 export default CountMonthChart;
-
-const Container = styled.div`
-  width: 10rem;
-`;

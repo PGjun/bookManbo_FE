@@ -3,12 +3,14 @@ import axios from "axios";
 import ShortBookHistory from "../components/ShortBookHistory";
 import PageCountBar from "../components/PageCountBar ";
 import SlideList from "../components/List/SlideList";
+import Test from "./Test";
 const Main = (props) => {
   //  링크 샘플
   //  http://www.aladin.co.kr/ttb/api/ItemLookUp.aspx?ttbkey=[TTBKey]&itemIdType=ISBN&ItemId=[도서의ISBN]&output=xml&Version=20131101&OptResult=ebookList,usedList,reviewList
 
   return (
     <>
+      {/* <Test /> */}
       <div className="max-w-screen-xl mx-auto mt-20 px-20">
         <div className="grid grid-cols-3 h-96">
           <div className="text-2xl font-semibold text-gray-600 my-auto space-y-3">

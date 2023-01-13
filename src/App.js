@@ -3,15 +3,23 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import Layout from "./layout/Layout";
-import Main from "./page/Main/Main";
+import Main from "./page/Main";
+import Mybook from "./page/Mybook/Mybook";
+import Detail from "./page/Mybook/Detail";
+
 function App() {
   return (
     <>
       <Router>
         <Routes>
           {/* <Route path="*" element={<NotFound />} /> */}
-          <Route exact path="/" element={<Layout />}>
-            <Route index element={<Main title="메인메뉴" />} />
+          <Route exact element={<Layout />}>
+            <Route index path="/" element={<Main title="메인메뉴" />} />
+            <Route path="/mybook" element={<Mybook title="나의 서재" />} />
+            <Route
+              path="/mybook/detail"
+              element={<Detail title="나의 서재세부" />}
+            />
             {/* /parant/child형태로 들어감 */}
             {/* <Route path="parant/*" element={<Parant title="부모 메뉴" />}>
             <Route path="child" element={<Child title="자식 메뉴" />} />

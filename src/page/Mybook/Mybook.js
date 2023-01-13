@@ -9,10 +9,9 @@ const Mybook = (props) => {
       <div className="max-w-screen-xl mx-auto">
         <PageCountBar />
         <ShortBookHistory />
-        <MybookList />
-        <Link to="detail" className="bg-red-300 w-full h-20">
-          이동
-        </Link>
+        <div className="mt-10 w-2/3">
+          <MybookList />
+        </div>
       </div>
     </>
   );

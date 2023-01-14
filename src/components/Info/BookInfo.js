@@ -10,7 +10,7 @@ const BookInfo = (props) => {
       <div className="flex gap-x-20">
         <div className="bg-gray-300 w-72 h-80" />
         <div className="w-4/5">
-          {state === "mybook" ? props.children : null}
+          {state === "mybook" ? children : null}
           <div className="">
             <p className="text-2xl font-semibold mb-1">{data.title}</p>
             <div className="flex items-center gap-x-4 divide-x-2 divide-gray-300 mb-5">
@@ -40,7 +40,7 @@ const BookInfo = (props) => {
               자세히 보기
             </div>
           </div>
-          {state === "search" ? props.children : null}
+          {state === "search" ? children : null}
         </div>
       </div>
     </>

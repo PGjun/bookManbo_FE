@@ -47,8 +47,8 @@ const SlideList = (props) => {
       <Slider {...settings}>
         {Data.item.map((item) => (
           <div key={item.itemId} className="">
-            <div className="border bg-gray-100 w-4/5 mx-auto h-72"></div>
-            <div className="w-4/5 mt-4 mx-auto">
+            <div className="border bg-gray-100 w-52 mx-auto h-64"></div>
+            <div className="w-52 mt-4 mx-auto">
               <div className="text-lg line-clamp-1 font-semibold">
                 {item.title}
               </div>

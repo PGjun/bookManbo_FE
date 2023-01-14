@@ -30,7 +30,6 @@ const Accordion = styled.main.attrs({
 const MyCard = (props) => {
   const { content, date, keyword } = props;
   const [target, setTarget] = useState(false);
-  console.log("클릭했어요 : ", target);
 
   return (
     <Accordion onClick={() => setTarget(!target)}>

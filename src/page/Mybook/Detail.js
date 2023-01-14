@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import BookInfo from "../../components/Info/BookInfo";
 import MyCard from "../../components/MyCard";
 
+import Modal from "../../components/Modal/Modal";
+import ModalPortal from "../../components/Modal/ModalPortal";
 const Detail = (props) => {
   // 임시데이터
   const data = {
@@ -57,8 +59,63 @@ const Detail = (props) => {
       keyword: ["키워드1", "키워드2", "키워드3"],
     },
   ];
+
+  const [openModal, setOpenModal] = useState(false);
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
   return (
     <>
+      {openModal && (
+        <ModalPortal>
+          <Modal onClose={handleCloseModal}>
+            <p className="text-2xl font-semibold mb-1">{data.title}</p>
+            <div className="flex items-center gap-x-4 divide-x-2 divide-gray-300 mb-10">
+              <p>{data.author}</p>
+              <p className="pl-4">드라마/로맨스</p>
+              <p className="pl-4">국내소설</p>
+            </div>
+            {/* keyword zone */}
+            <div className="flex gap-x-5 mb-10">
+              <p className="py-2 w-1/6">키워드 입력</p>
+              <div className="flex flex-col w-5/6 gap-y-3">
+                <input
+                  placeholder="# 키워드를 입력하세요"
+                  className="bg-gray-100 p-2 rounded-lg"
+                />
+                <div className="flex gap-x-2">
+                  <div className="w-fit font-semibold text-yellow-500 bg-yellow-100 px-2 py-1 rounded-full">
+                    # 키워드 1
+                  </div>
+                  <div className="w-fit font-semibold text-yellow-500 bg-yellow-100 px-2 py-1 rounded-full">
+                    # 키워드 2
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* edit zone */}
+            <textarea className="outline-none resize-none w-full h-96 bg-gray-100 rounded-lg p-5" />
+            {/* button zone */}
+            <div className="flex justify-center gap-x-2 mt-10">
+              <button
+                onClick={handleCloseModal}
+                className="px-4 py-2 rounded-lg text-lg bg-yellow-400 text-white font-semibold"
+              >
+                저장하기
+              </button>
+              <button
+                onClick={handleCloseModal}
+                className="px-4 py-2 rounded-lg text-lg bg-gray-400 text-white font-semibold"
+              >
+                취소하기
+              </button>
+            </div>
+          </Modal>
+        </ModalPortal>
+      )}
       <div className="max-w-screen-xl px-20 mx-auto mt-20">
         <div className="border-b mb-20 pb-20">
           <BookInfo state="mybook" data={data}>
@@ -107,7 +164,10 @@ const Detail = (props) => {
         </div>
         <div className="relative">
           <h3 className="text-2xl font-semibold">나의 기록</h3>
-          <button className="absolute right-0 top-0 text-white font-semibold bg-yellow-400 px-5 py-1 rounded-lg">
+          <button
+            onClick={handleOpenModal}
+            className="absolute right-0 top-0 text-white font-semibold bg-yellow-400 px-5 py-1 rounded-lg"
+          >
             기록 추가
           </button>
           <div className="bg-gray-100 py-10 my-5 ">저장한키워드zone</div>

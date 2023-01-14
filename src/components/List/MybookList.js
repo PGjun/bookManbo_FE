@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Data from "../../res/config/fakeData.json";
 const MybookList = () => {
   const [targetCtg, setTargetCtg] = useState("전체");
-
   const category = ["전체", "다 읽은 책", "읽고 있는 책", "찜한 책"];
 
   return (

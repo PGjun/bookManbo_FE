@@ -11,7 +11,7 @@ const Layout = (props) => {
       <main>
         <Outlet />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

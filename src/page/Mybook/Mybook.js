@@ -9,21 +9,20 @@ import GenreList from "../../components/GenreList";
 const Mybook = (props) => {
   return (
     <>
-      <div className="max-w-screen-xl mx-auto flex">
-        <div className="flex-auto">
-          <PageCountBar />
-          <ShortBookHistory />
-        </div>
-        <div className="flex-auto">
-          <MyCalendar />
-          <GenreList />
-        </div>
-      </div>
       <div className="max-w-screen-xl mx-auto">
-        <MybookList />
-        <Link to="detail" className="bg-red-300 w-full h-20">
-          이동
-        </Link>
+        <div className="flex">
+          <div className="flex-auto">
+            <PageCountBar />
+            <ShortBookHistory />
+          </div>
+          <div className="flex-auto">
+            <MyCalendar />
+            <GenreList />
+          </div>
+        </div>
+        <div className="w-2/3">
+          <MybookList />
+        </div>
       </div>
     </>
   );

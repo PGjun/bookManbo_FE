@@ -17,7 +17,6 @@ const PageCountBar = (props) => {
   `;
 
   const Container = styled.div`
-    width: 33%;
     height: 1rem;
     background: silver;
     border-radius: 0.7rem;

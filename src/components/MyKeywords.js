@@ -43,13 +43,9 @@ const MyKeywords = () => {
             <div className="box-border bg-whith h-auto p-6 border-2 rounded-2xl my-2">
                 <p className="font-bold mb-8 text-xl">내가 저장한 키워드</p>
                 <div className="flex flex-wrap gap-2"> 
-                    <KeywordBox keyword={keywordArr[0]} />
-                    <KeywordBox keyword={keywordArr[1]} />
-                    <KeywordBox keyword={keywordArr[2]} />
-                    <KeywordBox keyword={keywordArr[3]} />
-                    <KeywordBox keyword={keywordArr[4]} />
-                    <KeywordBox keyword={keywordArr[5]} />
-                    <KeywordBox keyword={keywordArr[6]} />
+                    {keywordArr.map((keyword) => (
+                        <KeywordBox keyword={keyword} key={keyword.id}/>
+                    ))}
                 </div>
             </div>
         </>

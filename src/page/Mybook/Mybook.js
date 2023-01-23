@@ -11,13 +11,13 @@ import RecentNote from "../../components/RecentNote";
 const Mybook = (props) => {
   return (
     <>
-      <div className="max-w-screen-xl mx-auto">
-        <div className="flex">
-          <div className="flex-auto">
+      <div className="max-w-screen-xl mx-auto my-10">
+        <div className="flex space-x-5 mb-10">
+          <div className="flex-auto space-y-5">
             <PageCountBar />
             <ShortBookHistory />
           </div>
-          <div className="flex-auto">
+          <div className="flex-auto space-y-5">
             <MyCalendar />
             <GenreList />
           </div>
@@ -26,7 +26,7 @@ const Mybook = (props) => {
           <div className="w-2/3">
             <MybookList />
           </div>
-          <div className="w-1/3">
+          <div className="w-1/3 space-y-5">
             <MyKeywords />
             <RecentNote />
           </div>

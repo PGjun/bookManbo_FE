@@ -4,7 +4,7 @@ import CountMonthChart from "./CountMonthChart";
 const ShortBookHistory = (props) => {
   return (
     <>
-      <div className="box-border bg-white h-32 p-6 border-2 rounded-2xl my-2 flex">
+      <div className="box-border bg-white h-52 p-6 border-2 rounded-2xl my-4 flex">
         <div className="flex-auto w-44">
           <p className="font-bold mb-2 text-xl">1월의 기록 근황</p>
           <div className="font-bold text-sm text-gray-400">
@@ -22,7 +22,7 @@ const ShortBookHistory = (props) => {
           <CountMonthChart />
         </div>
       </div>
-      <div className="box-border bg-white h-32 p-6 border-2 rounded-2xl my-2">
+      <div className="box-border bg-white h-52 p-6 border-2 rounded-2xl my-4">
         <span>
           <p className="font-bold">지금 읽고 있는 책이에요</p>
         </span>

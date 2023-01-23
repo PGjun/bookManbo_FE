@@ -4,6 +4,7 @@ import ShortBookHistory from "../components/ShortBookHistory";
 import PageCountBar from "../components/PageCountBar ";
 import SlideList from "../components/List/SlideList";
 import Test from "./Test";
+
 const Main = (props) => {
   //  링크 샘플
   //  http://www.aladin.co.kr/ttb/api/ItemLookUp.aspx?ttbkey=[TTBKey]&itemIdType=ISBN&ItemId=[도서의ISBN]&output=xml&Version=20131101&OptResult=ebookList,usedList,reviewList

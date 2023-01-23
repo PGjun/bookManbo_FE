@@ -45,13 +45,10 @@ const Header = () => {
             </button>
           </div>
           <div className="flex items-center gap-x-5">
-            <Link to="#" className="font-semibold">
+            <Link to="/login" className="font-semibold">
               로그인
             </Link>
-            <Link
-              to="#"
-              className="border border-gray-300 rounded-lg px-3 py-1 font-semibold"
-            >
+            <Link to="/join" className="border border-gray-300 rounded-lg px-3 py-1 font-semibold">
               회원가입
             </Link>
           </div>

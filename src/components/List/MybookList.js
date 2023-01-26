@@ -1,6 +1,16 @@
 import React, { useState } from "react";
+import axios from 'axios';
 import { Link } from "react-router-dom";
-import Data from "../../res/config/fakeData.json";
+
+let mybookData;
+
+axios.get('/dummy/my-library-all.json').then((Response)=>{
+  mybookData = Response.data;
+}).catch((Error)=>{
+  console.log(Error);
+})
+
+
 const MybookList = () => {
   const [targetCtg, setTargetCtg] = useState("전체");
   const category = ["전체", "다 읽은 책", "읽고 있는 책", "찜한 책"];
@@ -25,8 +35,8 @@ const MybookList = () => {
         ))}
       </div>
       <div className="grid grid-cols-4 gap-5">
-        {Data.item.map((item) => (
-          <Link to="detail" key={item.itemId} className="">
+        {mybookData.map((item) => (
+          <Link to="detail" key={item.isbn} className="">
             <div className="border bg-gray-100 w-48 h-60"></div>
             <div className="w-52 mt-2">
               <div className="text-lg line-clamp-1 font-semibold">

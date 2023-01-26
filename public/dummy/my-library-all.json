@@ -1,0 +1,30 @@
+[
+    {
+        "isbn": "9788989313694",
+        "title": "배려 - 마음을 움직이는 힘",
+        "author": "한상복 (지은이)",
+        "pubDate": "2006-01-10",
+        "description": "성공이란, 상대가 원하는 것을 충실하게 주다 보면 자연스럽게 돌아오는 대가이다. 경쟁자를 쓰러뜨리거나 누군가를 밟고 일어선다고 해서 이룰 수 있는 것이 아니다. 성공 자체만을 목표로 하고 달려가는 사람은 결코 성공할 수 없다. '배려'와 '나눔'은 타인이 아닌 결국 나 자신을 위한 배려이다.",
+        "coverImage": "https://image.aladin.co.kr/product/61/20/coversum/s722635387_1.jpg",
+        "category": "국내도서>자기계발>인간관계>인간관계",
+        "publisher": "위즈덤하우스",
+        "salesPoint": 45408,
+        "itemPage": 260,
+        "adult": false,
+        "customerReviewRank": 9.0
+    },
+    {
+        "isbn": "9791141009274",
+        "title": "무기체계 분석의 기법과 응용",
+        "author": "이춘주, 최상영 (지은이)",
+        "pubDate": "2022-12-31",
+        "description": "",
+        "coverImage": "https://image.aladin.co.kr/product/30925/28/coversum/k292831295_1.jpg",
+        "category": "국내도서>대학교재/전문서적>사회과학계열>군사학",
+        "publisher": "부크크(bookk)",
+        "salesPoint": 0,
+        "itemPage": 262,
+        "adult": false,
+        "customerReviewRank": 0.0
+    }
+]

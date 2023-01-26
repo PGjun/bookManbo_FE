@@ -1,8 +1,48 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
+let searchArr = [];
 
 const Header = () => {
   const [openPop, setOpenPop] = useState(false); //검색창 클릭시(open) 최근검색어, 인기검색어 해시태그 조회
+  const [searchData, setSearchData] = useState("");
+  const [showSearch, setShowSearch] = useState(false);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target[0].value);
+    console.log(searchArr);
+    setShowSearch(true);
+  };
+  const onChange = (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+    setSearchData(e.target.value);
+    console.log("searchData", searchData);
+  };
+
+  useEffect(() => {
+    axios
+      .get("fakesearchData.json")
+      .then((res) => {
+        // console.log(res);
+        // setSearchData(res.data);
+        searchArr = res.data;
+        console.log(searchArr);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  const filterSearch = searchArr.filter((item) => {
+    return item.title
+      .replace(" ", "")
+      .toLocaleLowerCase()
+      .includes(searchData.toLocaleLowerCase());
+  });
+
   return (
     <>
       <header className="bg-white border-b py-5 w-full ">
@@ -25,24 +65,27 @@ const Header = () => {
             className="w-2/5 rounded-full px-4 border-2 border-yellow-400 flex items-center justify-between"
             onClick={() => setOpenPop(!openPop)}
           >
-            <input
-              className="px-3 py-2 w-full outline-none"
-              placeholder="검색어를 입력해 주세요"
-            />
-            <button className="text-yellow-400 p-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="w-7 h-7"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </button>
+            <form onSubmit={(e) => onSubmit(e)} className="flex">
+              <input
+                className="px-3 py-2 w-full outline-none"
+                placeholder="검색어를 입력해 주세요"
+                onChange={onChange}
+              />
+              <button className="text-yellow-400 p-2" type="submit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-7 h-7"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+            </form>
           </div>
           <div className="flex items-center gap-x-5">
             <Link to="#" className="font-semibold">
@@ -57,6 +100,13 @@ const Header = () => {
           </div>
         </div>
       </header>
+      {showSearch ? (
+        <div>
+          {filterSearch.map((item, index) => (
+            <p key={index}>{item.title}</p>
+          ))}
+        </div>
+      ) : null}
     </>
   );
 };

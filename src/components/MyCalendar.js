@@ -2,11 +2,22 @@ import React, { useState } from "react";
 import Calendar from "react-calendar";
 import moment from "moment";
 import "../calendar-css.css";
+import axios from "axios";
+
+let mark = [];
+
+axios
+  .get("/dummy/myNote.json")
+  .then((Response) => {
+    Response.data.map((item) => {
+      mark.push(item.createdDate);
+      console.log(mark);
+    });
+  })
+  .catch((Error) => {});
 
 const MyCalendar = () => {
   const [value, onChange] = useState(new Date());
-
-  const mark = ["15-01-2023", "03-01-2023"];
 
   return (
     <>
@@ -22,7 +33,7 @@ const MyCalendar = () => {
             showNeighboringMonth={false} //  이전, 이후 달의 날짜는 보이지 않도록 설정
             className="mx-auto w-full text-base"
             tileClassName={({ date, view }) => {
-              if (mark.find((x) => x === moment(date).format("DD-MM-YYYY"))) {
+              if (mark.find((x) => x === moment(date).format("YYYY-MM-DD"))) {
                 return "highlight";
               }
             }}

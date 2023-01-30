@@ -32,24 +32,22 @@ const PageCountBar = (props) => {
 export default PageCountBar;
 
 const Box = styled.div`
-  height: 10rem;
+  height: auto;
   background: white;
+  margin-bottom: 30px;
 `;
 
 const WalkCount = styled.div`
   color: gray;
   font-weight: bold;
-  position: relative;
-  top: 30px;
-  left: 10px;
+  font-size: 1.8rem;
+  margin: 30px 0 80px 10px;
 `;
 
 const Container = styled.div`
   height: 1rem;
   background: silver;
   border-radius: 0.7rem;
-  position: relative;
-  top: 110px;
 `;
 
 const CountBar = styled.div`

@@ -1,47 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-
-let searchArr = [];
 
 const Header = () => {
   const [openPop, setOpenPop] = useState(false); //검색창 클릭시(open) 최근검색어, 인기검색어 해시태그 조회
-  const [searchData, setSearchData] = useState("");
-  const [showSearch, setShowSearch] = useState(false);
+  const navigate = useNavigate();
 
   const onSubmit = (e) => {
     e.preventDefault();
     console.log(e.target[0].value);
-    console.log(searchArr);
-    setShowSearch(true);
+    return navigate("/searchresult", {
+      state: e.target[0].value,
+    });
   };
-  const onChange = (e) => {
-    e.preventDefault();
-    console.log(e.target.value);
-    setSearchData(e.target.value);
-    console.log("searchData", searchData);
-  };
-
-  useEffect(() => {
-    axios
-      .get("fakesearchData.json")
-      .then((res) => {
-        // console.log(res);
-        // setSearchData(res.data);
-        searchArr = res.data;
-        console.log(searchArr);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
-
-  const filterSearch = searchArr.filter((item) => {
-    return item.title
-      .replace(" ", "")
-      .toLocaleLowerCase()
-      .includes(searchData.toLocaleLowerCase());
-  });
 
   return (
     <>
@@ -69,7 +40,7 @@ const Header = () => {
               <input
                 className="px-3 py-2 w-full outline-none"
                 placeholder="검색어를 입력해 주세요"
-                onChange={onChange}
+                // onChange={onChange}
               />
               <button className="text-yellow-400 p-2" type="submit">
                 <svg
@@ -88,11 +59,11 @@ const Header = () => {
             </form>
           </div>
           <div className="flex items-center gap-x-5">
-            <Link to="#" className="font-semibold">
+            <Link to="/login" className="font-semibold">
               로그인
             </Link>
             <Link
-              to="#"
+              to="/join"
               className="border border-gray-300 rounded-lg px-3 py-1 font-semibold"
             >
               회원가입
@@ -100,13 +71,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-      {showSearch ? (
-        <div>
-          {filterSearch.map((item, index) => (
-            <p key={index}>{item.title}</p>
-          ))}
-        </div>
-      ) : null}
     </>
   );
 };

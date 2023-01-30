@@ -1,10 +1,5 @@
-//
-//
-// Slick 슬라이더를 사용한 책 리스트
-//
-//
 import React, { useEffect, useState } from "react";
-import Data from "../../res/config/fakeData.json";
+import axios from "axios";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -13,7 +8,6 @@ import "slick-carousel/slick/slick-theme.css";
 const SlideList = (props) => {
   const { title, category, slide } = props; //제목, 카테고리, 슬라이드 수
   const [targetCtg, setTargetCtg] = useState("전체");
-
   const settings = {
     dots: true,
     infinite: true,
@@ -21,6 +15,18 @@ const SlideList = (props) => {
     slidesToShow: slide ? slide : 5,
     slidesToScroll: 5,
   };
+
+  // let mainData;
+  const [mainData, setMainData] = useState([]);
+
+  axios
+    .get("/dummy/mainData.json")
+    .then((Response) => {
+      setMainData(Response.data);
+    })
+    .catch((Error) => {
+      console.log(Error);
+    });
 
   return (
     <>
@@ -45,8 +51,8 @@ const SlideList = (props) => {
 
       {/* 책 리스트 슬라이더로 출력 */}
       <Slider {...settings}>
-        {Data.item.map((item) => (
-          <div key={item.itemId} className="">
+        {mainData.map((item) => (
+          <div key="{item}" className="">
             <div className="border bg-gray-100 w-48 mx-auto h-60"></div>
             <div className="w-48 mt-4 mx-auto">
               <div className="text-lg line-clamp-1 font-semibold">

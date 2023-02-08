@@ -28,6 +28,42 @@ const SlideList = (props) => {
       console.log(Error);
     });
 
+  const postHandler = (postdata) => {
+    console.log("postdata", postdata.isbn, postdata.coverImage);
+    axios
+      .post("http://localhost:4000/my-library-all", {
+        id: postdata.isbn,
+        isbn: postdata.isbn,
+        coverImage: postdata.coverImage,
+        title: postdata.title,
+        author: postdata.author,
+        category: postdata.category,
+        publisher: postdata.publisher,
+      })
+      .then((response) => {
+        console.log("response.data :", response.data);
+        alert("추가되었습니다");
+      })
+      .catch((error) => {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+          alert("이미 추가되어있는 책입니다.");
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request);
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.log("Error", error.message);
+        }
+        console.log(error.config);
+      });
+  };
   return (
     <>
       {/* 제목 + 구분 */}
@@ -60,6 +96,9 @@ const SlideList = (props) => {
               </div>
               <div className="text-lg line-clamp-1">{item.author}</div>
             </div>
+            <button type="button" onClick={() => postHandler(item)}>
+              추가하기
+            </button>
           </div>
         ))}
       </Slider>

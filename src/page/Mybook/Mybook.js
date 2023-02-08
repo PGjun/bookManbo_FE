@@ -27,7 +27,7 @@ const Mybook = (props) => {
             <MybookList />
           </div>
           <div className="w-1/3 space-y-5">
-            <MyKeywords />
+            {/* <MyKeywords /> */}
             <RecentNote />
           </div>
         </div>

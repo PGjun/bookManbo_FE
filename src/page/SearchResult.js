@@ -24,7 +24,7 @@ const SearchResult = (props) => {
 
   //호출한 api를 필러링해서 저장
   const filterSearchResult = searchResultData.filter((item) => {
-    return item.title
+    return item.title //title이 책제목이기 때문에 title을 검색어로 필터링하는게 맞다.
       .replace(" ", "")
       .toLocaleLowerCase()
       .includes(searchValue.toLocaleLowerCase());

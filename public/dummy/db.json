@@ -1,0 +1,159 @@
+{
+  "mainData": [
+    {
+      "isbn": "9791141009120",
+      "coverImage": "https://image.aladin.co.kr/product/30925/33/coversum/k222831295_1.jpg",
+      "title": "누구나 영어로 말할 수 있다 (컬러판)",
+      "author": "이은지 외 (지은이)",
+      "category": "국내도서>외국어>영어듣기/말하기",
+      "publisher": "부크크(bookk)"
+    },
+    {
+      "isbn": "9791141009274",
+      "coverImage": "https://image.aladin.co.kr/product/30925/28/coversum/k292831295_1.jpg",
+      "title": "무기체계 분석의 기법과 응용",
+      "author": "이춘주, 최상영 (지은이)",
+      "category": "국내도서>대학교재/전문서적>사회과학계열>군사학",
+      "publisher": "부크크(bookk)"
+    },
+    {
+      "isbn": "9791141009441",
+      "coverImage": "https://image.aladin.co.kr/product/30925/22/coversum/k282831295_1.jpg",
+      "title": "그래도 가보겠습니다 - 지역언론 민주화를 위해 맞선 기자들의 다짐",
+      "author": "이창호, 홍봄, 우제성 (지은이)",
+      "category": "국내도서>에세이>한국에세이",
+      "publisher": "부크크(bookk)"
+    },
+    {
+      "isbn": "9791141009434",
+      "coverImage": "https://image.aladin.co.kr/product/30925/20/coversum/k272831295_1.jpg",
+      "title": "뉴필법(관계사/분사)",
+      "author": "이재형 Joshua Lee (지은이)",
+      "category": "국내도서>외국어>영문법",
+      "publisher": "부크크(bookk)"
+    },
+    {
+      "isbn": "9791141009489",
+      "coverImage": "https://image.aladin.co.kr/product/30925/12/coversum/k142831295_1.jpg",
+      "title": "풍운록 제1권",
+      "author": "스러기 (지은이)",
+      "category": "국내도서>소설/시/희곡>한국소설>2000년대 이후 한국소설",
+      "publisher": "부크크(bookk)"
+    },
+    {
+      "isbn": "9791191979282",
+      "coverImage": "https://image.aladin.co.kr/product/30925/9/coversum/k032831295_1.jpg",
+      "title": "세상 그 어디에도 없는 룸 2.58",
+      "author": "김도영 (지은이)",
+      "category": "국내도서>에세이>한국에세이",
+      "publisher": "깊은나무"
+    },
+    {
+      "isbn": "9791141009519",
+      "coverImage": "https://image.aladin.co.kr/product/30925/5/coversum/k072831295_1.jpg",
+      "title": "IFRS 실무회계",
+      "author": "나규세 (지은이)",
+      "category": "국내도서>대학교재/전문서적>경상계열>세무/회계",
+      "publisher": "부크크(bookk)"
+    },
+    {
+      "isbn": "9791141010232",
+      "coverImage": "https://image.aladin.co.kr/product/30924/96/coversum/k902831295_1.jpg",
+      "title": "어린 왕자",
+      "author": "앙투안 드 생텍쥐페리 (지은이), 유용선 (옮긴이)",
+      "category": "국내도서>소설/시/희곡>프랑스소설",
+      "publisher": "부크크(bookk)"
+    },
+    {
+      "isbn": "9791191513028",
+      "coverImage": "https://image.aladin.co.kr/product/30924/92/coversum/k952831295_1.jpg",
+      "title": "구원의 확신 - 구원론",
+      "author": "이규학 (지은이)",
+      "category": "국내도서>종교/역학>기독교(개신교)>기독교(개신교) 신앙생활>간증/영적성장",
+      "publisher": "둘셋손잡고"
+    },
+    {
+      "isbn": "9791168366756",
+      "coverImage": "https://image.aladin.co.kr/product/30924/88/coversum/k812831294_1.jpg",
+      "title": "우주에서 온 소녀의 21세기 암행어사 5 - 인재들의 집단 청유회",
+      "author": "김으겸 (지은이)",
+      "category": "국내도서>소설/시/희곡>판타지/환상문학>한국판타지/환상소설",
+      "publisher": "북랩"
+    }
+  ],
+  "my-library-all": [
+    {
+      "isbn": "9788989313694",
+      "title": "배려 - 마음을 움직이는 힘",
+      "author": "한상복 (지은이)",
+      "pubDate": "2006-01-10",
+      "description": "성공이란, 상대가 원하는 것을 충실하게 주다 보면 자연스럽게 돌아오는 대가이다. 경쟁자를 쓰러뜨리거나 누군가를 밟고 일어선다고 해서 이룰 수 있는 것이 아니다. 성공 자체만을 목표로 하고 달려가는 사람은 결코 성공할 수 없다. '배려'와 '나눔'은 타인이 아닌 결국 나 자신을 위한 배려이다.",
+      "coverImage": "https://image.aladin.co.kr/product/61/20/coversum/s722635387_1.jpg",
+      "category": "국내도서>자기계발>인간관계>인간관계",
+      "publisher": "위즈덤하우스",
+      "salesPoint": 45408,
+      "itemPage": 260,
+      "adult": false,
+      "customerReviewRank": 9
+    }
+  ],
+  "myKeyword": [
+    {
+      "id": "1",
+      "keyword": "자기계발"
+    },
+    {
+      "id": "2",
+      "keyword": "에세이"
+    },
+    {
+      "id": "3",
+      "keyword": "인문학"
+    },
+    {
+      "id": "4",
+      "keyword": "산문집"
+    },
+    {
+      "id": "5",
+      "keyword": "스릴러소설"
+    },
+    {
+      "id": "6",
+      "keyword": "제테크"
+    },
+    {
+      "id": "7",
+      "keyword": "로맨스"
+    }
+  ],
+  "myNote": [
+    {
+      "id": "1",
+      "Account": "User1",
+      "isbn": "1",
+      "title": "배려 : 마음을 움직이는 힘",
+      "contents": "성공이란, 상대가 원하는 것을 충실하게 주다 보면 자연스럽게 돌아오는 대가이다. 경쟁자를 쓰러뜨리거나 누군가를 밟고 일어선다고 해서 이룰 수 있는 것이 아니다. 성공 자체만을 목표로 하고 달려가는 사람은 결코 성공할 수 없다. '배려'와 '나눔'은 타인이 아닌 결국 나 자신을 위한 배려이다.",
+      "createdDate": "2023-01-01",
+      "modifiedDate": ""
+    },
+    {
+      "id": "2",
+      "Account": "User1",
+      "isbn": "2",
+      "title": "딸아, 외로울 때는 시를 읽으렴 - 지금 생의 가장 아름다운 시절을 보내고 있는 당신에게 주고 싶은 시 90편",
+      "contents": "그녀는 자신이 얼마나 예쁜지도 모른 채 방황하고 있는 딸들을 생각하며 시를 골랐다고 한다. 이 책은 시를 통해 넘어져 아파도 씩씩하게 털고 일어나는 힘을 얻게 되길, 그래서 세상에서 가장 행복한 사람이 되길 바라는 마음을 담은 따뜻한 응원가이다.",
+      "createdDate": "2023-01-12",
+      "modifiedDate": ""
+    },
+    {
+      "id": "3",
+      "Account": "User1",
+      "isbn": "3",
+      "title": "높고 푸른 사다리",
+      "contents": "주인공 요한이 소희를 만나 사랑을 하고, 주변 사람들의 이야기를 들으며, \"고통은 왜 있는 것이며, 인간은 왜 존재하는지, 사랑은 무엇인지\" 같은 질문을 하면서 성장해나가는 과정을 그리고 있다.",
+      "createdDate": "2023-01-17",
+      "modifiedDate": ""
+    }
+  ]
+}

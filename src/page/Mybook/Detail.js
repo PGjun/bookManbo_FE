@@ -4,19 +4,23 @@ import MyCard from "../../components/MyCard";
 
 import Modal from "../../components/Modal/Modal";
 import ModalPortal from "../../components/Modal/ModalPortal";
+import { useLocation } from "react-router-dom";
 const Detail = (props) => {
+  const location = useLocation();
+  const detail_props = location.state;
+  console.log("detail_props: ", detail_props);
+
   // 임시데이터
   const data = {
-    title: "높고 푸른 사다리",
-    author: "공지영 지음",
+    title: detail_props.title,
+    author: detail_props.author,
     pubDate: "2013-10-28",
     description:
       '공지영 장편소설. 한 젊은 수사의 사랑과 방황을 그린 일종의 성장소설이다. 주인공 요한이 소희를 만나 사랑을 하고, 주변 사람들의 이야기를 들으며, "고통은 왜 있는 것이며, 인간은 왜 존재하는지, 사랑은 무엇인지" 같은 질문을 하면서 성장해나가는 과정을 그리고 있다.',
-    isbn: "8984317470",
+    isbn: detail_props.isbn,
     isbn13: "9788984317475",
     itemId: 32265050,
-    cover:
-      "http://image.aladin.co.kr/product/3226/50/coversum/8984317470_3.jpg",
+    cover: detail_props.coverImage,
     customerReviewRank: 8,
     bestRank: 4,
     subInfo: {
@@ -97,7 +101,7 @@ const Detail = (props) => {
               </div>
             </div>
             {/* edit zone */}
-            <textarea className="outline-none resize-none w-full h-96 bg-gray-100 rounded-lg p-5" />
+            <textarea className="outline-none resize-none w-full h-40 bg-gray-100 rounded-lg p-5" />
             {/* button zone */}
             <div className="flex justify-center gap-x-2 mt-10">
               <button

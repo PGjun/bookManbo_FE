@@ -90,18 +90,22 @@ const MybookList = () => {
       <div className="grid grid-cols-4 gap-5">
         {mybookData.map((item) => (
           <div>
-            <Link to="detail" key={item.isbn} className="">
-              <div className="border bg-gray-100 w-48 h-60"></div>
+            <div key={item.id}>
+              {/*state로 detail 페이지에 데이터전달 */}
+              <Link to="detail" state={item}>
+                <div className="border bg-gray-100 w-48 h-60"></div>
+              </Link>
+
               <div className="w-52 mt-2">
                 <div className="text-lg line-clamp-1 font-semibold">
                   {item.title}
                 </div>
                 <div className="text-lg line-clamp-1">{item.author}</div>
               </div>
-            </Link>
-            <button type="button" onClick={() => deleteHandler(item)}>
-              삭제하기
-            </button>
+              <button type="button" onClick={() => deleteHandler(item)}>
+                삭제하기
+              </button>
+            </div>
           </div>
         ))}
       </div>

@@ -8,7 +8,9 @@ const BookInfo = (props) => {
   return (
     <>
       <div className="flex gap-x-20">
-        <div className="bg-gray-300 w-72 h-80" />
+        <div className="bg-gray-300 w-72 h-80">
+          <img src={data.cover} className="w-full h-full" />
+        </div>
         <div className="w-4/5">
           {state === "mybook" ? props.children : null}
           <div className="">

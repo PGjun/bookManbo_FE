@@ -94,24 +94,6 @@
       "publisher": "위즈덤하우스"
     },
     {
-      "id": "9791141009120",
-      "isbn": "9791141009120",
-      "coverImage": "https://image.aladin.co.kr/product/30925/33/coversum/k222831295_1.jpg",
-      "title": "누구나 영어로 말할 수 있다 (컬러판)",
-      "author": "이은지 외 (지은이)",
-      "category": "국내도서>외국어>영어듣기/말하기",
-      "publisher": "부크크(bookk)"
-    },
-    {
-      "id": "9791141009274",
-      "isbn": "9791141009274",
-      "coverImage": "https://image.aladin.co.kr/product/30925/28/coversum/k292831295_1.jpg",
-      "title": "무기체계 분석의 기법과 응용",
-      "author": "이춘주, 최상영 (지은이)",
-      "category": "국내도서>대학교재/전문서적>사회과학계열>군사학",
-      "publisher": "부크크(bookk)"
-    },
-    {
       "id": "9791141009441",
       "isbn": "9791141009441",
       "coverImage": "https://image.aladin.co.kr/product/30925/22/coversum/k282831295_1.jpg",
@@ -121,21 +103,22 @@
       "publisher": "부크크(bookk)"
     },
     {
-      "id": "9791141009434",
-      "isbn": "9791141009434",
-      "coverImage": "https://image.aladin.co.kr/product/30925/20/coversum/k272831295_1.jpg",
-      "title": "뉴필법(관계사/분사)",
-      "author": "이재형 Joshua Lee (지은이)",
-      "category": "국내도서>외국어>영문법",
-      "publisher": "부크크(bookk)"
+      "id": "9791141009274",
+      "isbn": "9791141009274",
+      "coverImage": "https://image.aladin.co.kr/product/30925/28/coversum/k292831295_1.jpg",
+      "title": "무기체계 분석의 기법과 응용",
+      "author": "이춘주, 최상영 (지은이)",
+      "category": "국내도서>대학교재/전문서적>사회과학계열>군사학",
+      "publisher": "부크크(bookk)",
+      "memo": "무기체계 분석의 기법 메모입니"
     },
     {
-      "id": "9791141009489",
-      "isbn": "9791141009489",
-      "coverImage": "https://image.aladin.co.kr/product/30925/12/coversum/k142831295_1.jpg",
-      "title": "풍운록 제1권",
-      "author": "스러기 (지은이)",
-      "category": "국내도서>소설/시/희곡>한국소설>2000년대 이후 한국소설",
+      "id": "9791141009120",
+      "isbn": "9791141009120",
+      "coverImage": "https://image.aladin.co.kr/product/30925/33/coversum/k222831295_1.jpg",
+      "title": "누구나 영어로 말할 수 있다 (컬러판)",
+      "author": "이은지 외 (지은이)",
+      "category": "국내도서>외국어>영어듣기/말하기",
       "publisher": "부크크(bookk)"
     }
   ],

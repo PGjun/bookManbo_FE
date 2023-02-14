@@ -63,6 +63,7 @@ const MybookList = () => {
       .delete(`http://localhost:4000/my-library-all/${deletedata.id}`)
       .then((response) => {
         console.log(response.data);
+        alert("서재에서 삭제되었습니다.");
       })
       .catch((error) => {
         console.error(error);

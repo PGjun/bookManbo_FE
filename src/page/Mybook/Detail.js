@@ -5,6 +5,7 @@ import MyCard from "../../components/MyCard";
 import Modal from "../../components/Modal/Modal";
 import ModalPortal from "../../components/Modal/ModalPortal";
 import { useLocation } from "react-router-dom";
+import axios from "axios";
 const Detail = (props) => {
   const location = useLocation();
   const detail_props = location.state;
@@ -65,12 +66,38 @@ const Detail = (props) => {
   ];
 
   const [openModal, setOpenModal] = useState(false);
-  const handleOpenModal = () => {
+  const handleOpenModal = (e) => {
     setOpenModal(true);
   };
-  const handleCloseModal = () => {
+  const handleCloseModal = (e) => {
     setOpenModal(false);
   };
+
+  const [memoState, setMemoState] = useState("");
+
+  const onChange = (e) => {
+    // console.log(e.target.value);
+    setMemoState(e.target.value);
+  };
+
+  const onClick = (e) => {
+    handleCloseModal();
+    console.log(memoState);
+    axios
+      .put(`http://localhost:4000/my-library-all/${detail_props.id}`, {
+        id: detail_props.id,
+        isbn: detail_props.isbn,
+        coverImage: detail_props.coverImage,
+        title: detail_props.title,
+        author: detail_props.author,
+        category: detail_props.category,
+        publisher: detail_props.publisher,
+        memo: memoState,
+      })
+      .then((res) => alert("메모추가완료"))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <>
       {openModal && (
@@ -101,11 +128,15 @@ const Detail = (props) => {
               </div>
             </div>
             {/* edit zone */}
-            <textarea className="outline-none resize-none w-full h-40 bg-gray-100 rounded-lg p-5" />
+
+            <textarea
+              onChange={onChange}
+              className="outline-none resize-none w-full h-40 bg-gray-100 rounded-lg p-5"
+            />
             {/* button zone */}
             <div className="flex justify-center gap-x-2 mt-10">
               <button
-                onClick={handleCloseModal}
+                onClick={onClick}
                 className="px-4 py-2 rounded-lg text-lg bg-yellow-400 text-white font-semibold"
               >
                 저장하기

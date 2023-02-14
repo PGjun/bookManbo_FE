@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BookInfo from "../../components/Info/BookInfo";
 import MyCard from "../../components/MyCard";
 
@@ -9,7 +9,7 @@ import axios from "axios";
 const Detail = (props) => {
   const location = useLocation();
   const detail_props = location.state;
-  console.log("detail_props: ", detail_props);
+  // console.log("detail_props: ", detail_props);
 
   // 임시데이터
   const data = {
@@ -84,19 +84,54 @@ const Detail = (props) => {
     handleCloseModal();
     console.log(memoState);
     axios
-      .put(`http://localhost:4000/my-library-all/${detail_props.id}`, {
-        id: detail_props.id,
-        isbn: detail_props.isbn,
-        coverImage: detail_props.coverImage,
-        title: detail_props.title,
-        author: detail_props.author,
-        category: detail_props.category,
-        publisher: detail_props.publisher,
+      .post(`http://localhost:4000/myMemo`, {
+        book_id: detail_props.id,
         memo: memoState,
       })
       .then((res) => alert("메모추가완료"))
       .catch((err) => console.log(err));
+    // axios
+    //   .patch(`http://localhost:4000/my-library-all/${detail_props.id}`, {
+    //     memo: memoState,
+    //   })
+    //   .then((res) => alert("메모추가완료"))
+    //   .catch((err) => console.log(err));
   };
+
+  //메모가져오기 axios.get
+  const [error, setError] = useState(null);
+  const [memoDB, setMemoDB] = useState([]);
+
+  useEffect(() => {
+    let isCancelled = false;
+
+    const fetchData = async () => {
+      // setLoading(true);
+      setError(null);
+
+      try {
+        const response = await axios.get(
+          `http://localhost:4000/myMemo?book_id=${detail_props.id}`
+        );
+        if (!isCancelled) {
+          setMemoDB(response.data);
+          console.log("response.data", response.data);
+        }
+      } catch (error) {
+        if (!isCancelled) {
+          setError(error);
+        }
+      }
+
+      // setLoading(false);
+    };
+
+    fetchData();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, []);
 
   return (
     <>
@@ -205,7 +240,13 @@ const Detail = (props) => {
           >
             기록 추가
           </button>
-          <div className="bg-gray-100 py-10 my-5 ">저장한키워드zone</div>
+          {memoDB.map((item) => (
+            <div className="bg-gray-100 py-10 my-5 ">
+              <div key={item.id}>{item.memo}</div>
+            </div>
+          ))}
+
+          <div className="bg-gray-100 py-10 my-5 ">저장한 키워드존</div>
           {/* component zone */}
           <div className="my-2 space-y-5">
             {cardData?.map((item) => (

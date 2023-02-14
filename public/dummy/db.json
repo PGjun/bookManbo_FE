@@ -94,15 +94,6 @@
       "publisher": "위즈덤하우스"
     },
     {
-      "id": "9791141009441",
-      "isbn": "9791141009441",
-      "coverImage": "https://image.aladin.co.kr/product/30925/22/coversum/k282831295_1.jpg",
-      "title": "그래도 가보겠습니다 - 지역언론 민주화를 위해 맞선 기자들의 다짐",
-      "author": "이창호, 홍봄, 우제성 (지은이)",
-      "category": "국내도서>에세이>한국에세이",
-      "publisher": "부크크(bookk)"
-    },
-    {
       "id": "9791141009274",
       "isbn": "9791141009274",
       "coverImage": "https://image.aladin.co.kr/product/30925/28/coversum/k292831295_1.jpg",
@@ -110,7 +101,7 @@
       "author": "이춘주, 최상영 (지은이)",
       "category": "국내도서>대학교재/전문서적>사회과학계열>군사학",
       "publisher": "부크크(bookk)",
-      "memo": "무기체계 분석의 기법 메모입니"
+      "memo": "무기체계 분석의 기법을 왜 알아야 돼요?"
     },
     {
       "id": "9791141009120",
@@ -120,6 +111,33 @@
       "author": "이은지 외 (지은이)",
       "category": "국내도서>외국어>영어듣기/말하기",
       "publisher": "부크크(bookk)"
+    },
+    {
+      "id": "9791141009434",
+      "isbn": "9791141009434",
+      "coverImage": "https://image.aladin.co.kr/product/30925/20/coversum/k272831295_1.jpg",
+      "title": "뉴필법(관계사/분사)",
+      "author": "이재형 Joshua Lee (지은이)",
+      "category": "국내도서>외국어>영문법",
+      "publisher": "부크크(bookk)"
+    },
+    {
+      "id": "9791141009489",
+      "isbn": "9791141009489",
+      "coverImage": "https://image.aladin.co.kr/product/30925/12/coversum/k142831295_1.jpg",
+      "title": "풍운록 제1권",
+      "author": "스러기 (지은이)",
+      "category": "국내도서>소설/시/희곡>한국소설>2000년대 이후 한국소설",
+      "publisher": "부크크(bookk)"
+    },
+    {
+      "id": "9791191979282",
+      "isbn": "9791191979282",
+      "coverImage": "https://image.aladin.co.kr/product/30925/9/coversum/k032831295_1.jpg",
+      "title": "세상 그 어디에도 없는 룸 2.58",
+      "author": "김도영 (지은이)",
+      "category": "국내도서>에세이>한국에세이",
+      "publisher": "깊은나무"
     }
   ],
   "myKeyword": [
@@ -179,6 +197,23 @@
       "contents": "주인공 요한이 소희를 만나 사랑을 하고, 주변 사람들의 이야기를 들으며, \"고통은 왜 있는 것이며, 인간은 왜 존재하는지, 사랑은 무엇인지\" 같은 질문을 하면서 성장해나가는 과정을 그리고 있다.",
       "createdDate": "2023-01-17",
       "modifiedDate": ""
+    }
+  ],
+  "myMemo": [
+    {
+      "book_id": "9791141009120",
+      "memo": "안녕하세요",
+      "id": 1
+    },
+    {
+      "book_id": "9791141009120",
+      "memo": "반가워요",
+      "id": 2
+    },
+    {
+      "book_id": "9791141009120",
+      "memo": "다시 만나요~",
+      "id": 3
     }
   ]
 }
